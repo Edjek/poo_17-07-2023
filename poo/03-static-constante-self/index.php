@@ -1,6 +1,7 @@
 <?php
 
 require_once './SimulateurCredit.php';
+require_once './Mathematique.php';
 
 SimulateurCredit::setQuotient(100);
 echo SimulateurCredit::displayCalculTaux(786785);
@@ -18,6 +19,12 @@ echo SimulateurCredit::displayCalculTaux(786785);
 
     // La fonction division appelera la method isNull
     // la division ne se fera qui si la fonction vaut true
+
+    echo '<br>';
+    echo Mathematique::addition(12.8, 90);
+    echo '<br>';
+    echo Mathematique::division('yfhgfhfgh', 0);
+
 
 
 
