@@ -59,4 +59,4 @@ echo $aliceInWonderland->read()
 
 
 
-// var_dump(get_class_methods($panier));
+
