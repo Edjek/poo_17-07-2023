@@ -9,7 +9,7 @@ require_once './Article.php';
 // Le polymorphisme permet de redéfinir une méthode dans la classe enfant.
 class Aliment extends Article
 {
-    private string $datePeremption;
+    protected string $datePeremption;
 
     // constructeur initialise toutes les propriétés
     public function __construct(string $name, float $price, string $date)
