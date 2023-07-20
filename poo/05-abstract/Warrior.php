@@ -12,7 +12,7 @@ class Warrior extends Player
         $this->arrow = $arrow;
     }
 
-    public function save($chef)
+    public function calculTVA($chef)
     {}
 
     public function hit()
@@ -38,4 +38,5 @@ class Warrior extends Player
 
         return $this;
     }
+
 }

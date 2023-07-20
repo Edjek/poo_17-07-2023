@@ -12,19 +12,13 @@ abstract class Player
         $this->name = $name;
     }
 
-    public abstract function save($title);
-
-    /**
-     */
-    public function getName()
+    public function getName():string
     {
         return $this->name;
     }
 
-    /**
-     *
-     * @return  self
-     */
+    protected abstract function calculTVA($price);
+
     public function setName($name)
     {
         $this->name = $name;
@@ -32,17 +26,11 @@ abstract class Player
         return $this;
     }
 
-    /**
-     */
     public function getLife()
     {
         return $this->life;
     }
 
-    /**
-     *
-     * @return  self
-     */
     public function setLife($life)
     {
         $this->life = $life;
@@ -50,17 +38,11 @@ abstract class Player
         return $this;
     }
 
-    /**
-     */
     public function getScore()
     {
         return $this->score;
     }
 
-    /**
-     *
-     * @return  self
-     */
     public function setScore($score)
     {
         $this->score = $score;
@@ -72,4 +54,5 @@ abstract class Player
     {
         $this->life = $this->life - 10;
     }
+
 }

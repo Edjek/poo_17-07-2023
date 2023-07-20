@@ -2,11 +2,17 @@
 
 require_once './Player.php';
 require_once './Warrior.php';
+require_once './Mage.php';
 
 $guerrier = new Warrior('Ken', 23);
 echo $guerrier->getName();
 echo $guerrier->getSCore();
 echo $guerrier->getArrow();
+
+$mage = new Mage('Merlin', 890);
+echo $mage->getName();
+echo $mage->getLife();
+echo $mage->getMana();
 // creer une class Player
     // name;
     // life par defaut à 100
