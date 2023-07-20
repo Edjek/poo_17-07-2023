@@ -1,25 +1,14 @@
 <?php
 
-// Creer une class Animal qui sera abstraite
-    // nom chaine de caractere
-    // age entier
-    // nbPatte entier
-    // listAliment tableau
-    // constructeur
-    // getter setter
-    // methode abstraite qui prend un parametre getEat();
+require_once './Animal.php';
+require_once './Dog.php';
+require_once './Bird.php';
 
-// Creer une class Dog herite d'Animal
-    // pedigree chaine de caractere
-    // constructeur
-    // getter et setter
-    // method description
-        // retourne Je m'appelle : XXX et j'ai XXX ans et mon pedigree est : XXX et je mange XXX
+$droopy = new Dog('Droopy', 5, 4, ['hot-dog', 'saucisse'], 'racé');
+echo $droopy->getName();
+$rintintin = new Dog('Rintintin', 12, 4, ['hot-dog', 'croquette'], 'racé');
+echo $rintintin->description();
 
-// Creer une class Bird herite d'Animal
-    // migrate booleen
-    // constructeur
-    // getter setter
-    // methode description()
-        // Si migrateur retourne 'Je suis un oiseau migrateur'
-        // Sinon retourne 'Je ne suis pas un oiseau migrateur
+$titi = new Bird('Titi', 2, 2, ['graines', 'couscous'], false);
+echo $titi->getName();
+echo $titi->description();;

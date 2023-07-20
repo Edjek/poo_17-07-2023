@@ -1,6 +1,11 @@
 <?php
 
-// Transformer la class Player en abstraite, ainsi que sa fonction hit
+// Une classe abstraite est une classe qui ne peut pas être instanciée
+// Une classe abstraite peut contenir des méthodes abstraites
+// Elle sert de modèle à d'autres classes qui en hériteront
+
+// Une méthode abstraite est une méthode qui n'a pas de contenu
+// Lorsqu'une classe hérite d'une classe abstrainte, elle doit obligatoirement redéfinir les méthodes abstraites de la classe mère
 abstract class Player
 {
     protected string $name;
