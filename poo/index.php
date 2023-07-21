@@ -18,7 +18,7 @@
 // 10. Les classes abstraites et les interfaces
 // 11. Les classes finales
 // 12. Les espaces de noms (namespaces)
-// 14. L'autoload
+// 13. L'autoload
 
 /*------------------------------------*\
     #CLASS
