@@ -13,8 +13,6 @@ use \App\interface\lib\Animal;
 $loup = new Animal();
 // $loup2 = new Animal2();
 
-
-
 $droopy = new Dog('Droopy', 5, 4, ['hot-dog', 'saucisse'], 'racé');
 echo $droopy->getName();
 $rintintin = new Dog('Rintintin', 12, 4, ['hot-dog', 'croquette'], 'racé');

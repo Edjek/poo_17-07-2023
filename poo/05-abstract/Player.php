@@ -17,12 +17,12 @@ abstract class Player
         $this->name = $name;
     }
 
-    public function getName():string
+    public function getName(): string
     {
         return $this->name;
     }
 
-    protected abstract function calculTVA($price);
+    protected abstract function attack(int $point);
 
     public function setName($name)
     {
@@ -59,5 +59,4 @@ abstract class Player
     {
         $this->life = $this->life - 10;
     }
-
 }

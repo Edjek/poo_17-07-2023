@@ -6,32 +6,15 @@ require_once './Mage.php';
 
 $guerrier = new Warrior('Ken', 23);
 echo $guerrier->getName();
+echo '<br>';
 echo $guerrier->getSCore();
+echo '<br>';
 echo $guerrier->getArrow();
+echo '<br>';
 
 $mage = new Mage('Merlin', 890);
 echo $mage->getName();
+echo '<br>';
 echo $mage->getLife();
+echo '<br>';
 echo $mage->getMana();
-// creer une class Player
-    // name;
-    // life par defaut à 100
-    // score par defaut à 0
-    // constructor
-        // initialise le name
-    // getter et setter
-    // method hit(), elle enleve 10 point life
-
-// creer une class Warrior qui herite de player
-    // arrow (nombre de fleche)
-    // constructor
-    // getter et setter
-    // method hit(), elle enleve 15 point life
-
-
-// creer une class Mage qui herite de Player
-    // mana un entier
-    // constructor
-    // getter et setter
-    // method hit(), elle enleve 30 point life
-

@@ -3,34 +3,32 @@
 class Book
 {
     /**
-     * [Description for $title]
-     *
      * @var string
      */
     private string $title;
 
     /**
-     * [Description for $author]
-     *
      * @var string
      */
     private string $author;
 
     /**
-     * [Description for $pages]
-     *
      * @var int
      */
     private int $pages;
 
     /**
-     * [Description for $year]
-     *
      * @var int
      */
     private int $year;
 
-    public function __construct(string $title, string $author, int $pages, int $year )
+    /**
+     * @param string $title
+     * @param string $author
+     * @param int $pages
+     * @param int $year
+     */
+    public function __construct(string $title, string $author, int $pages, int $year)
     {
         $this->title = $title;
         $this->author = $author;
@@ -38,93 +36,88 @@ class Book
         $this->year = $year;
     }
 
+    /**
+     * @return string
+     */
     public function read(): string
     {
         return "Je lis le livre $this->title, écris par $this->author";
     }
 
+    /**
+     * @return string
+     */
     public function getTitle(): string
     {
         return $this->title;
     }
 
+    /**
+     * @param mixed $title
+     *
+     * @return self
+     */
     public function setTitle($title): self
     {
         $this->title = $title;
         return $this;
     }
 
-    
-
     /**
-     * Get [Description for $author]
-     *
      * @return  string
-     */ 
-    public function getAuthor()
+     */
+    public function getAuthor(): string
     {
         return $this->author;
     }
 
     /**
-     * Set [Description for $author]
-     *
-     * @param  string  $author  [Description for $author]
+     * @param  string  $author
      *
      * @return  self
-     */ 
-    public function setAuthor(string $author)
+     */
+    public function setAuthor(string $author): self
     {
         $this->author = $author;
-
         return $this;
     }
 
     /**
-     * Get [Description for $pages]
-     *
      * @return  int
-     */ 
-    public function getPages()
+     */
+    public function getPages(): int
     {
         return $this->pages;
     }
 
     /**
-     * Set [Description for $pages]
-     *
-     * @param  int  $pages  [Description for $pages]
+     * @param  int  $pages
      *
      * @return  self
-     */ 
-    public function setPages(int $pages)
+     */
+    public function setPages(int $pages): self
     {
         $this->pages = $pages;
-
         return $this;
     }
 
     /**
-     * Get [Description for $year]
-     *
      * @return  int
-     */ 
-    public function getYear()
+     */
+    public function getYear(): int
     {
         return $this->year;
     }
 
     /**
-     * Set [Description for $year]
      *
-     * @param  int  $year  [Description for $year]
+     * @param  int  $year
      *
      * @return  self
-     */ 
-    public function setYear(int $year)
+     */
+    public function setYear(int $year): self
     {
         $this->year = $year;
-
         return $this;
     }
 }

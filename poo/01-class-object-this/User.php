@@ -10,7 +10,6 @@ class User
     // Une méthode est une fonction définie dans une classe.
 
     /**
-     *
      * @var string
      */
     public string $firstname; // une propriété
@@ -27,25 +26,21 @@ class User
     public string $email;
 
     /**
-     *
      * @var string
      */
     public string $password;
 
     /**
-     *
      * @var int
      */
     public int $age = 0;
 
     /**
-     *
      * @var array
      */
     public array $notes;
 
     /**
-     *
      * @return string
      */
     public function hello(): string // une méthode
@@ -54,17 +49,15 @@ class User
     }
 
     /**
-     *
-     * @return [type]
+     * @return string
      */
-    private function bonjour()
+    private function bonjour(): string
     {
         return "Bonjour, je m'appelle $this->firstname $this->lastname";
     }
 
     /**
      * Cette fonction affiche l'identite du User
-     *
      * @param int age
      *
      * @return string
@@ -74,5 +67,3 @@ class User
         return $this->bonjour()   . " et j'ai $age ans";
     }
 }
-
-

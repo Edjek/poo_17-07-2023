@@ -9,94 +9,87 @@ class Animal
      protected int $nbPattes;
      protected array $listAliment;
 
-     public function __construct(string $name,int $age,int $nbPattes,array $listAliment)
+     public function __construct(string $name, int $age, int $nbPattes, array $listAliment)
      {
-        $this->name = $name;
-        $this->age = $age;
-        $this->nbPattes = $nbPattes;
-        $this->listAliment = $listAliment;
+          $this->name = $name;
+          $this->age = $age;
+          $this->nbPattes = $nbPattes;
+          $this->listAliment = $listAliment;
      }
 
-
      /**
-      * Get the value of name
-      */ 
-     public function getName()
+      * @return string
+      */
+     public function getName(): string
      {
           return $this->name;
      }
 
      /**
-      * Set the value of name
+      * @param string $name
       *
-      * @return  self
-      */ 
-     public function setName($name)
+      * @return self
+      */
+     public function setName(string $name): self
      {
           $this->name = $name;
-
           return $this;
      }
 
      /**
-      * Get the value of age
-      */ 
-     public function getAge()
+      * @return int
+      */
+     public function getAge(): int
      {
           return $this->age;
      }
 
      /**
-      * Set the value of age
+      * @param int $age
       *
-      * @return  self
-      */ 
-     public function setAge($age)
+      * @return self
+      */
+     public function setAge(int $age): self
      {
           $this->age = $age;
-
           return $this;
      }
 
      /**
-      * Get the value of nbPattes
-      */ 
-     public function getNbPattes()
+      * @return int
+      */
+     public function getNbPattes(): int
      {
           return $this->nbPattes;
      }
 
      /**
-      * Set the value of nbPattes
+      * @param int $nbPattes
       *
-      * @return  self
-      */ 
-     public function setNbPattes($nbPattes)
+      * @return self
+      */
+     public function setNbPattes(int $nbPattes): self
      {
           $this->nbPattes = $nbPattes;
-
           return $this;
      }
 
      /**
-      * Get the value of listAliment
-      */ 
-     public function getListAliment()
+      * @return array
+      */
+     public function getListAliment(): array
      {
           return $this->listAliment;
      }
 
      /**
-      * Set the value of listAliment
+      * @param array $listAliment
       *
-      * @return  self
-      */ 
-     public function setListAliment($listAliment)
+      * @return self
+      */
+     public function setListAliment(array $listAliment): self
      {
           $this->listAliment = $listAliment;
-
           return $this;
      }
-
-     // public abstract function getEat();
 }

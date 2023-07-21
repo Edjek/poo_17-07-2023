@@ -41,11 +41,11 @@ $animal->type = 'mouton';
 
 $dog = new Animal();
 $dog->name = 'Droopy';
-$dog->type ='chien';
+$dog->type = 'chien';
 $dog->age = 23;
 
 $cat = new Animal();
-$cat->name= 'Jerry';
+$cat->name = 'Jerry';
 $cat->type = 'chat';
 $cat->age = 12;
 

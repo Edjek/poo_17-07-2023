@@ -4,20 +4,23 @@ namespace App\namespace;
 
 final class User
 {
+    /**
+     * @var string
+     */
     private string $pseudo;
 
+    /**
+     * @param string $name
+     */
     public function __construct(string $name)
     {
         $this->pseudo = $name;
     }
 
-    // Constructeur pour initialiser le pseudo
-    // getter
-
     /**
-     * Get the value of pseudo
-     */ 
-    public function getPseudo()
+     * @return string
+     */
+    public function getPseudo(): string
     {
         return $this->pseudo;
     }

@@ -20,13 +20,11 @@ class Car
     private string $model;
 
     /**
-     *
      * @var string
      */
     private string $color;
 
     /**
-     *
      * @var string
      */
     public string $date;
@@ -48,9 +46,7 @@ class Car
     }
 
     /**
-     *
      * @return string
-     *
      */
     public function display(): string
     {
@@ -58,9 +54,7 @@ class Car
     }
 
     /**
-     *
      * @return string
-     *
      */
     public function getModel(): string
     {
@@ -68,11 +62,9 @@ class Car
     }
 
     /**
-     *
      * @param string $model
      *
      * @return self
-     *
      */
     public function setModel(string $model): self
     {
@@ -81,11 +73,9 @@ class Car
     }
 
     /**
-     *
      * @param string $color
      *
      * @return self
-     *
      */
     public function setColor(string $color): self
     {
@@ -93,12 +83,20 @@ class Car
         return $this;
     }
 
-    public function getColor()
+    /**
+     * @return string
+     */
+    public function getColor(): string
     {
         return $this->color;
     }
 
-    public function setDate($date)
+    /**
+     * @param string $date
+     *
+     * @return self
+     */
+    public function setDate(string $date): self
     {
         $this->date = $date;
         return $this;
