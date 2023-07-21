@@ -1,6 +1,8 @@
 <?php
 
-abstract class Animal
+namespace App\interface;
+
+class Animal
 {
      protected string $name;
      protected int $age;
@@ -96,5 +98,5 @@ abstract class Animal
           return $this;
      }
 
-     public abstract function getEat();
+     // public abstract function getEat();
 }

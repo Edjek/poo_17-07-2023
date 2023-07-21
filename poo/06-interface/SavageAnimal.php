@@ -1,5 +1,7 @@
 <?php
 
+namespace App\interface;
+
 // Une interface est un contrat qui permet de définir des méthodes que les classes qui implémentent cette interface doivent implémenter.
 
 interface SavageAnimal

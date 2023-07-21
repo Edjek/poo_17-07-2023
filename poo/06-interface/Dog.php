@@ -1,6 +1,9 @@
 <?php
 
+namespace App\interface;
+
 require_once './Animal.php';
+require_once './SavageAnimal.php';
 
 class Dog extends Animal implements SavageAnimal
 {
@@ -18,6 +21,16 @@ class Dog extends Animal implements SavageAnimal
 
     public function getEat()
     {
+    }
+
+    public function devore()
+    {
+        return 'je viens de dévorer un animal';
+    }
+
+    public function eatSomeOne(Bird $x)
+    {
+        return 'je viens de dévorer :' . $x->getName();
     }
 
     /**

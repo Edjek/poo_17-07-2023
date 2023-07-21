@@ -1,5 +1,7 @@
 <?php
 
+namespace App\interface;
+
 class Bird extends Animal
 {
     private bool $migrate;
