@@ -39,23 +39,33 @@
 class Books
 {
     /**
-     *
      * @var string
      */
     public string $title;
     public string $author;
     public int $yearOfPublication;
 
+    /**
+     * @return string
+     */
     public function read(): string
     {
         return "Je lis le livre $this->title écrit par $this->author, publié en $this->yearOfPublication.";
     }
 
+    /**
+     * @return string
+     */
     public function getAuthor(): string
     {
         return $this->author;
     }
 
+    /**
+     * @param string $year
+     *
+     * @return self
+     */
     public function setYearOfPublication(string $year): self
     {
         $this->yearOfPublication = $year;
@@ -107,29 +117,57 @@ echo $HarryPotter->getAuthor();
 
 class Manga
 {
+    /**
+     * @var string
+     */
     private string $title;
+
+    /**
+     * @var string
+     */
     private string $author;
 
+    /**
+     * @return string
+     */
     public function getAuthor(): string
     {
         return $this->author;
     }
 
-    public function setAuthor(string $author): void
+    /**
+     * @param string $author
+     *
+     * @return self
+     */
+    public function setAuthor(string $author): self
     {
         $this->author = $author;
+        return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getTitle(): string
     {
         return $this->title;
     }
 
-    public function setTitle(string $title): void
+    /**
+     * @param string $title
+     *
+     * @return self
+     */
+    public function setTitle(string $title): self
     {
         $this->title = $title;
+        return $this;
     }
 
+    /**
+     * @return string
+     */
     public function read(): string
     {
         return "Je lis le livre $this->title écrit par $this->author";
@@ -209,25 +247,33 @@ echo $Naruto->read();
 
 class Engine
 {
-    public function start()
+    /**
+     * @return string
+     */
+    public function start(): string
     {
-        echo "Engine started!\n";
+        return "Engine started!";
     }
 }
 
 class Car
 {
-    private $engine;
+    /**
+     * @var Engine
+     */
+    private Engine $engine;
 
     public function __construct()
     {
         $this->engine = new Engine();
     }
 
-    public function start()
+    /**
+     * @return string
+     */
+    public function start(): string
     {
-        $this->engine->start();
-        echo "Car started!\n";
+        return $this->engine->start() . "Car started!";
     }
 }
 
@@ -241,20 +287,37 @@ $car->start();
 // L'aggrégation permet de créer une classe qui contient des objets d'autres classes.
 class Livre
 {
+    /**
+     * @var string
+     */
     private string $title;
+
+    /**
+     * @var string
+     */
     private string $author;
 
+    /**
+     * @param string $title
+     * @param string $author
+     */
     public function __construct(string $title, string $author)
     {
         $this->title = $title;
         $this->author = $author;
     }
 
+    /**
+     * @return string
+     */
     public function getTitle(): string
     {
         return $this->title;
     }
 
+    /**
+     * @return string
+     */
     public function getAuthor(): string
     {
         return $this->author;
@@ -263,17 +326,24 @@ class Livre
 
 class Library
 {
+    /**
+     * @var array
+     */
     private array $books;
 
-    public function __construct()
-    {
-    }
-
+    /**
+     * @param Livre $book
+     *
+     * @return void
+     */
     public function addBook(Livre $book): void
     {
         $this->books[] = $book;
     }
 
+    /**
+     * @return array
+     */
     public function getBooks(): array
     {
         return $this->books;
@@ -302,23 +372,39 @@ foreach ($books as $book) {
 
 class Database
 {
-    public function query($sql)
+    /**
+     * @param mixed $sql
+     *
+     * @return string
+     */
+    public function query($sql): string
     {
-        echo "Executing query: " . $sql . "\n";
+        return "Executing query: " . $sql . "\n";
         // Code pour exécuter la requête SQL sur la base de données réelle
     }
 }
 
 class UserRepository
 {
-    private $database;
+    /**
+     * @var Database
+     */
+    private Database $database;
 
+    /**
+     * @param Database $database
+     */
     public function __construct(Database $database)
     {
         $this->database = $database;
     }
 
-    public function getUserById($id)
+    /**
+     * @param int $id
+     *
+     * @return void
+     */
+    public function getUserById(int $id): void
     {
         $sql = "SELECT * FROM users WHERE id = " . $id;
         $this->database->query($sql);
