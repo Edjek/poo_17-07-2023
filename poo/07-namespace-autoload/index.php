@@ -1,4 +1,4 @@
-Exercice :
+<!-- Exercice :
 
 Toutes nos classes seront dans des namespace avec la logique que nous venont de voir
 
@@ -29,4 +29,39 @@ Créez des instances des classes `Renault` et `Peugeot`.
 Affichez le résultat en utilisant des `echo` pour afficher :
    - Le message retourné par la méthode `demarrer()` pour chaque véhicule.
    - Le carburant de chaque véhicule en utilisant la méthode `carburant()`.
-   - Le nombre de tests effectués pour chaque véhicule en utilisant la méthode `nbTest()`.
+   - Le nombre de tests effectués pour chaque véhicule en utilisant la méthode `nbTest()`. -->
+<?php
+
+spl_autoload_register(function($a){
+  $a = substr($a, 14);
+   require_once $a . '.php';
+});
+
+
+use App\namespace\Peugeot;
+use App\namespace\Renault;
+use App\namespace\User;
+use App\namespace\Engine;
+
+$renaultClio = new Renault();
+echo $renaultClio->demarrer();
+echo '<br>';
+echo $renaultClio->nbTest();
+echo '<br>';
+
+$peugeot405 = new Peugeot();
+echo $peugeot405->demarrer();
+echo '<br>';
+echo $peugeot405->nbTest();
+
+$rachid = new User('Rach');
+echo '<br>';
+echo $rachid->getPseudo();
+
+echo '<br>';
+ echo $peugeot405->start($rachid);
+
+//  Creer une interface appeler Engine
+    // fonction public start qui prend en parametre un user
+
+// Obliger Peugeot et la class Renault a implementer cette interface
